@@ -1,0 +1,55 @@
+<div class="accountPage">
+    <div class="header-top-line home-wrapper">
+        <div class="header-logo">
+        </div>
+        <nav>
+            <ul class="header-nav-ul">
+                <a ng-click="$ctrl.exitAccount()">
+                    <li>Выйти</li>
+                </a>
+                <modal-window ng-show="$ctrl.$rootScope.showModalWindow"></modal-window>
+            </ul>
+        </nav>
+    </div>
+    <div class="account">
+        <div class="accountTop">
+            <div class="accountTopLeft">
+                <img class="userPhoto" ng-src={{$ctrl.user.avatar}}>
+            </div>
+            <div class="accountTopRight">
+                <span class="userData">{{$ctrl.user.name+" "+$ctrl.user.surname}}</span><br/>
+                <span class="userStatus">Статус: <span>{{'нови'+'чок'}}</span></span>
+                <p>E-mail: <span>{{$ctrl.user.email}}</span></p>
+                <p>Изучено уроков: <span>{{2+1}}/50</span></p>
+                <p>Рекомендованные профессии:
+                    <span><a ng-href="/recommended-profession"
+                             ng-show="!$ctrl.$rootScope.RecommendedProfession&&!$ctrl.user.recomendedProfession">Пройти тест</a></span>
+                    <span ng-repeat="recommendedProfession in $ctrl.$rootScope.RecommendedProfession||$ctrl.user.recomendedProfession">
+                    {{recommendedProfession}}
+                </span>
+                </p>
+            </div>
+        </div>
+        <h2>Изучаю</h2>
+        <div class="accountBottom">
+            <div class="progressProfession" ng-repeat="professions in $ctrl.user.professions">
+                <span class="profession-name">{{professions.profession.rus}}</span>
+                <div class={{professions.profession.name}}></div>
+                <br/>
+               <progress max='10' value={{professions.currentLevel}}></progress>
+                    {{professions.currentLevel}} уровень<br/>
+                <span>{{professions.currentLevel}}/{{professions.profession.numberLessons}} уроков</span>
+                <span><button class="toProfession" ng-click="$ctrl.toCurrentProfession(professions.profession)">К профессии
+                </button></span>
+            </div>
+            <div class="addNewProfession">
+                <br/>
+                <div class="addNewProfessionButton" ng-click="$ctrl.goToAdder()">
+                </div>
+                <br/>
+                <span>Добавить профессию</span>
+            </div>
+        </div>
+    </div>
+    <modal-window ng-show="$ctrl.showModalWindow"></modal-window>
+</div>

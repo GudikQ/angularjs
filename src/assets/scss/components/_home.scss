@@ -1,0 +1,68 @@
+.home-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-first-box {
+    background: url('../../assets/img/home-header-img.png') no-repeat 50% 0;
+    background-size: contain;
+    height: 450px;
+}
+.home-h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 350px;
+    margin: 0;
+    font-family: oks;
+}
+.home-button-box {
+    text-align: center;
+    margin-top: 80px;
+}
+.home-button {
+    width: 220px;
+    padding: 15px 0 15px 0px;
+    margin-left: 20px;
+    text-align: center;
+    display: inline-block;
+    background-color: $primary-color-fiolet;
+    border: 2px solid $primary-color-fiolet;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.home-button:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    color: #ffffff;
+}
+.home-button.home-button-transparent {
+    color: $primary-color-fiolet;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1300px) {
+    .home-wrapper {
+        max-width: 960px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .home-wrapper {
+        max-width: 800px;
+    }
+    .home-h1 {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .home-wrapper {
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header-first-box {
+        background-size: cover;
+    }
+}

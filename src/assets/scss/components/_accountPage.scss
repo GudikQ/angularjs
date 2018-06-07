@@ -1,0 +1,155 @@
+.accountPage {
+  max-width: 100%;
+  text-align: center;
+  user-select: none;
+  .header {
+    width: 100%;
+    height: 3em;
+  }
+  .account {
+    .accountTop {
+      width: 100%;
+      height: 21em;
+      display: flex;
+      background: url('../../assets/img/account-background.png') no-repeat 100% 100%;
+      background-size: cover;
+      .accountTopRight {
+        padding: 1em;
+        width: 45%;
+        text-align: left;
+        .userData {
+          font-weight: bold;
+          font-size: 1.5em;
+        }
+        .userStatus {
+          border-bottom: 2px solid $primary-color-fiolet;
+          line-height: 3em;
+          span {
+            margin: 1em;
+            font-weight: bold;
+          }
+        }
+        p {
+          margin-top: 0.5em;
+          span {
+            margin: 1em;
+            font-weight: bold;
+            a {
+              border-bottom: 2px dashed $primary-color-fiolet;
+            }
+          }
+        }
+      }
+      .accountTopLeft {
+        text-align: right;
+        margin: 1em;
+        width: 45%;
+        background: url('../../assets/img/account-photo-background.png') no-repeat;
+        background-size: 20em;
+        background-position: right top;
+        .userPhoto {
+          width: 10em;
+          height: 10em;
+          margin: 3em;
+          background: url('../../assets/img/user.png') no-repeat center;
+          border-radius: 50%;
+          background-color: white;
+          overflow: hidden;
+        }
+      }
+    }
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 2em;
+      font-family: oks;
+    }
+    .accountBottom {
+      width: inherit;
+      height: 10em;
+      padding: 2em;
+      display: inline-flex;
+      .addNewProfession {
+        width: min-content;
+        height: min-content;
+        .addNewProfessionButton {
+          cursor: pointer;
+          width: 8em;
+          height: 8em;
+          border-radius: 50%;
+          background: $light-color-grey url('../../assets/img/add-profession.png') no-repeat center;
+        }
+        .addNewProfessionButton:hover {
+          transform: scale(1.1);
+          transition: all 1s;
+        }
+      }
+      .progressProfession {
+        width: min-content;
+        height: min-content;
+        margin-right: 2em;
+        margin-bottom: 2em;
+        .cook {
+          width: 8em;
+          height: 8em;
+          background: url('../../assets/img/account-profession-cook.png') center no-repeat;
+          background-size: contain;
+        }
+        .designer {
+          width: 8em;
+          height: 8em;
+          background: url('../../assets/img/account-profession-designer.png') center no-repeat;
+          background-size: contain;
+        }
+        .teacher {
+          width: 8em;
+          height: 8em;
+          background: url('../../assets/img/account-profession-teacher.png') center no-repeat;
+          background-size: contain;
+        }
+        .builder {
+          width: 8em;
+          height: 8em;
+          background: url('../../assets/img/account-profession-builder.png') center no-repeat;
+          background-size: contain;
+        }
+        .doctor {
+          width: 8em;
+          height: 8em;
+          background: url('../../assets/img/account-profession-doctor.png') center no-repeat;
+          background-size: contain;
+        }
+        progress {
+          width: -webkit-fill-available;
+          height: 0.5em;
+          -webkit-appearance: none;
+        }
+        progress::-webkit-progress-bar {
+          background-color: $primary-color-red;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        progress::-webkit-progress-value {
+          background-color: $primary-color-lime;
+        }
+        .toProfession {
+          // height: 1.5em;
+          color: $primary-color-white;
+          border-radius: 2em;
+          background-color: $primary-color-fiolet;
+          padding: 12px 15px;
+          margin-top: 10px;
+          border: none;
+        }
+        .toProfession:hover {
+          transform: scale(1.1);
+          transition: all 1s;
+        }
+      }
+    }
+  }
+}
+.profession-name {
+  text-transform: capitalize;
+  font-weight: 700;
+}

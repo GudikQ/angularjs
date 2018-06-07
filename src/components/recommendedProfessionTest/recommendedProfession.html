@@ -1,0 +1,87 @@
+<div class="recommendedProf">
+    <div class="recommendedProfHeader">
+        <ul>
+            <li class="accountLogo">LOGO</li>
+            <li>
+                <a ng-click="$ctrl.exit()">выйти</a>
+                <modal-window ng-show="$ctrl.showModalWindow"></modal-window>
+            </li>
+            <li><a ng-click="$ctrl.returnToAccount()" title="вернутся в аккаунт"><img
+                    src="../../assets/img/user.png"></a></li>
+        </ul>
+    </div>
+    <article>Любая работа должна приносить удовольствие, и не только материальное, но и духовное. Ты же не хочешь всю
+        жизнь ходить как в воду опущенный по восемь часов ежедневно?
+        Именно поэтому мы подготовили для Тебя интересный тест на профориентацию. Он поможет Тебе лучше узнать себя и
+        сделать правильный выбор профессии.
+    </article>
+    <form>
+        <ul class="question">1. Я лучше буду заниматься финансовыми операциями, чем выступать на сцене.
+            <li><input type="radio" ng-value="2" name="question1" ng-model="$ctrl.question1">Да.</li>
+            <li><input type="radio" ng-value="1" name="question1" ng-model="$ctrl.question1">Затрудняюсь ответить.</li>
+            <li><input type="radio" ng-value="0" name="question1" ng-model="$ctrl.question1">Нет.</li>
+        </ul>
+        <ul class="question">2. У меня на рабочем столе скорее беспорядок, чем безупречный порядок.
+            <li><input type="radio" ng-value="0" name="question2" ng-model="$ctrl.question2">Да.</li>
+            <li><input type="radio" ng-value="1" name="question2" ng-model="$ctrl.question2">Затрудняюсь ответить.</li>
+            <li><input type="radio" ng-value="2" name="question2" ng-model="$ctrl.question2">Нет.</li>
+        </ul>
+        <ul class="question">3. Люблю выполнять задания согласно инструкции, или по четко указанным алгоритмам.
+            <li><input type="radio" ng-value="2" name="question3" ng-model="$ctrl.question3">Да.</li>
+            <li><input type="radio" ng-value="1" name="question3" ng-model="$ctrl.question3">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="0" name="question3" ng-model="$ctrl.question3">Нет.</li>
+        </ul>
+        <ul class="question">4. Я раздражаюсь, когда нужно навести порядок в комнате, упорядочить или систематизировать
+            что-то.
+            <li><input type="radio" ng-value="0" name="question4" ng-model="$ctrl.question4">Да.</li>
+            <li><input type="radio" ng-value="1" name="question4" ng-model="$ctrl.question4">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="2" name="question4" ng-model="$ctrl.question4">Нет.</li>
+        </ul>
+        <ul class="question">5. Прежде чем приступить к делу, я подробно продумаю свои действия.
+            <li><input type="radio" ng-value="2" name="question5" ng-model="$ctrl.question5">Да.</li>
+            <li><input type="radio" ng-value="1" name="question5" ng-model="$ctrl.question5">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="0" name="question5" ng-model="$ctrl.question5">Нет.</li>
+        </ul>
+        <ul class="question">6. Когда я пишу письмо, мне важнее:
+            <li><input type="radio" ng-value="2" name="question6" ng-model="$ctrl.question6">Логичность текста.</li>
+            <li><input type="radio" ng-value="1" name="question6" ng-model="$ctrl.question6">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="0" name="question6" ng-model="$ctrl.question6">Образность изложения.
+            </li>
+        </ul>
+        <ul class="question">7. Я хотел бы, что моя профессия...
+            <li><input type="radio" ng-value="0" name="question7" ng-model="$ctrl.question7">Каждый раз дарила мне
+                новую порцию адреналина.
+            </li>
+            <li><input type="radio" ng-value="1" name="question7" ng-model="$ctrl.question7">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="2" name="question7" ng-model="$ctrl.question7">Погружала меня в
+                состояние покоя и давала ощущение защищенности.
+            </li>
+        </ul>
+        <ul class="question">8. Я выполняю работу в последний момент.
+            <li><input type="radio" ng-value="0" name="question8" ng-model="$ctrl.question8">Да.</li>
+            <li><input type="radio" ng-value="1" name="question8" ng-model="$ctrl.question8">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="2" name="question8" ng-model="$ctrl.question8">Нет.</li>
+        </ul>
+        <ul class="question">9. Если меня ждет ответственное дело, я непременно составлю план его выполнения.
+            <li><input type="radio" ng-value="2" name="question9" ng-model="$ctrl.question9">Да.</li>
+            <li><input type="radio" ng-value="1" name="question9" ng-model="$ctrl.question9">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="0" name="question9" ng-model="$ctrl.question9">Нет.</li>
+        </ul>
+        <ul class="question">10. Если у меня что-то не получается, я...
+            <li><input type="radio" ng-value="2" name="question10" ng-model="$ctrl.question10">Терпеливо ищу решение.
+            </li>
+            <li><input type="radio" ng-value="1" name="question10" ng-model="$ctrl.question10">Затрудняюсь ответить.
+            </li>
+            <li><input type="radio" ng-value="0" name="question10" ng-model="$ctrl.question10">Раздражаюсь и злюсь.</li>
+        </ul>
+    </form>
+    <div class="recProfButton"><button ng-click="$ctrl.getResult($ctrl.form)" class="recommendedTestButton">Узнать результат</button></div>
+    <modal-window ng-show="$ctrl.$rootScope.showModalWindow"></modal-window>
+</div>

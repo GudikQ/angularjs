@@ -1,0 +1,37 @@
+<div class='conteiner-form'>
+    <header-component></header-component>
+    <h2 class="caption-h2">Регистрация</h2>
+    <form name='login' noValidate method='post' ng-submit="$ctrl.registerUser($event)">
+
+        <input type='email' name='email' placeholder='Введите свой е-мейл'
+            ng-class="$ctrl.emailClass"
+            ng-focus="$ctrl.hideStatus($event)"
+            ng-blur="$ctrl.isValidemail($event.target)"
+        />
+        <div class='errormsg'>{{$ctrl.emailError}}</div>
+        
+        <input type="password" name='password' placeholder='Придумайте пароль'
+            ng-class="$ctrl.passwordClass"
+            ng-focus="$ctrl.hideStatus($event)"
+            ng-blur="$ctrl.isValidpassword($event.target)"
+        />
+        <div class='errormsg'>{{$ctrl.passwordError}}</div>
+
+        <input type="text" name='name' placeholder='Ваше имя'
+            ng-class="$ctrl.nameClass"
+            ng-focus="$ctrl.hideStatus($event)"
+            ng-blur="$ctrl.isValidtext($event.target)"
+        />
+        <div class='errormsg'>{{$ctrl.nameError}}</div>
+       
+        <input type="text" name='surname' placeholder='Ваша фамилия'
+            ng-class="$ctrl.surnameClass"
+            ng-focus="$ctrl.hideStatus($event)"
+            ng-blur="$ctrl.isValidtext($event.target)"
+        />
+        <div class='errormsg'>{{$ctrl.surnameError}}</div>
+        
+        <button class='button' type="submit">Отправить</button>
+    </form>
+    <a class='link'href="/login">Go to Login</a>
+</div>
